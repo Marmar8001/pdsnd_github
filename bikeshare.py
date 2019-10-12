@@ -19,9 +19,9 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
     while True:
-        city= input("Enter your city name in US: ")
+        city= input("Enter city name you are looking for in US: ")
         if city not in ["Chicago", "New York City", "Washington"]:
-            print( "No data available for this city. please choose another city")
+            print( "No data available for this city. please choose another city in US")
             continue
         else:
 
@@ -59,7 +59,7 @@ def load_data(city, month, day):
 
     # filter by month if applicable
     if month != 'all':
-        # use the index of the months list to get the corresponding int
+        # use the index of the months list to get the corresponding integer
         months = ['January', 'February', 'March', 'April', 'May', 'June']
         month = months.index(month) + 1
 
@@ -130,7 +130,7 @@ def trip_duration_stats(df):
     print("total travel time: ",(df['Trip Duration'].sum()))
 
 
-    # display mean travel time
+    # display average travel time
     print("mean travel time: ", (df['Trip Duration'].mean()))
 
 
@@ -174,13 +174,9 @@ def user_stats(df):
     except:
         print("No data available for this month")
 
-
-
-
-
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+
 
 def display_raw_data(df):
     """ Display raw data upon user request"""
