@@ -145,13 +145,13 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # Display counts of user types
+    # Display counts of user types.
     print("counts of user type: ",(df['User Type'].value_counts()))
 
 
 
 
-    # Display counts of gender
+    # Display counts of gender. Please note some data files does not have gender type or date of birth.
     try:
         print("counts of gender:",(df['Gender'].value_counts()))
     except KeyError:
@@ -182,10 +182,10 @@ def display_raw_data(df):
     """ Display raw data upon user request"""
     count=0
     while True:
-        raw_data_display=input("Do you want to see raw data? y or N ")
-        if (raw_data_display=="y"):
+        raw_data_display=input("Do you want to see raw data? yes or No ")
+        if (raw_data_display=="yes"):
             print(df.iloc[count:(count+5)])
-        elif (raw_data_display=="N"):
+        elif (raw_data_display=="No"):
             break
 
 
