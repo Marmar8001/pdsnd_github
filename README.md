@@ -1,7 +1,7 @@
-##Date created
+##Date created##  
 Include the date you created this project and README file.
 
-##Project Title
+##Project Title##  
 Replace the Project Title
 
 ##Description
