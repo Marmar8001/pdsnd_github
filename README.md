@@ -1,14 +1,11 @@
 ## Date created
-Include the date you created this project and README file.
-
+10/13/2019
 ## Project Title
-Replace the Project Title
-
+Statistics on Bikeshare data
 ## Description  
-Describe what your project is about and what it does
-
+By using Python language and Pandas library, some stats on bikeshare data of Chicago, Newyork city and Washington calculated.
 ## Files used  
-Include the files used
+csv files on Chicago, Newyork and Washington
 
 ## Credits  
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+www.stackoverflow.com
