@@ -20,7 +20,7 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
     while True:
-        city= input("Enter your city name in US: ")
+        city= input("Enter the city name you are looking for in US: ")
         if city not in ["Chicago", "New York City", "Washington"]:
             print( "No data available for this city. please choose another city")
             continue
@@ -41,7 +41,6 @@ def get_filters():
             break
 
     days_of_week=["Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday", "Sunday", "all"]
-
     while True:
         day= input("Enter the week day you are looking for: ")
         if day not in days_of_week:
@@ -135,7 +134,7 @@ def trip_duration_stats(df):
     print("total travel time: ",(df['Trip Duration'].sum()))
 
 
-    # display mean travel time
+    # display average travel time
     print("mean travel time: ", (df['Trip Duration'].mean()))
 
 
@@ -155,7 +154,7 @@ def user_stats(df):
 
 
 
-    # Display counts of gender
+    # Display counts of gender.Some data files does not have date of birth or gender type
     try:
         print("counts of gender:",(df['Gender'].value_counts()))
     except KeyError:
@@ -189,10 +188,10 @@ def display_raw_data(df):
     """ Display raw data upon user request"""
     count=0
     while True:
-        raw_data_display=input("Do you want to see raw data? Answer with y or N ")
-        if (raw_data_display=="y"):
+        raw_data=input("Do you want to see raw data? Answer with yes or No ")
+        if (raw_data=="yes"):
             print(df.iloc[count:(count+5)])
-        elif (raw_data_display=="N"):
+        elif (raw_data=="No"):
             break
 
 
