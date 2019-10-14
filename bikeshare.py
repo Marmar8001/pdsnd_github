@@ -185,7 +185,7 @@ def user_stats(df):
 
 
 def display_raw_data(df):
-    """ Display raw data upon user request"""
+    """ Display all raw data upon user request"""
     count=0
     while True:
         raw_data=input("Do you want to see raw data? Answer with yes or No ")
