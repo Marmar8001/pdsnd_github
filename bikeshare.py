@@ -137,7 +137,7 @@ def trip_duration_stats(df):
     print("total travel time: ",(df['Trip Duration'].sum()))
 
 
-    # display mean travel time
+    # display average travel time
     print("mean travel time: ", (df['Trip Duration'].mean()))
 
 
@@ -157,7 +157,7 @@ def user_stats(df):
 
 
 
-    # Display counts of gender
+    # Display counts of gender.Some data files does not have date of birth or gender type
     try:
         print("counts of gender:",(df['Gender'].value_counts()))
     except KeyError:
